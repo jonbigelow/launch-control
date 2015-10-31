@@ -21,7 +21,7 @@
 </head>
 <body>
 <div id="wrapper">
-    <nav class="navbar-default navbar-static-side" role="navigation">
+    <nav class="navbar-default navbar-static-side" role="navigation" role="navigation">
         <div class="sidebar-collapse">
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
@@ -36,13 +36,13 @@
                             </ul>
                     </div>
                     <div class="logo-element">
-                        LC+
+                        LC
                     </div>
                 </li>
-                <li>
-                    <a href="index.html"><span class="nav-label"><i class="fa fa-calendar fa-lg"></i>Schedule</span></a>
-                </li>
                 <li class="active">
+                    <a href="index.html"><i class="fa fa-calendar-o fa-lg"></i> <span class="nav-label">Schedule</span></a>
+                </li>
+                <li>
                     <a href="index.html"><i class="fa fa-th fa-lg"></i> <span class="nav-label">Releases</span></a>
                     <ul class="nav nav-second-level">
                         <li class="active"><a href="release.html">1601</a></li>
@@ -53,7 +53,16 @@
                     </ul>
                 </li>
                 <li><a href="testing.html"><i class="fa fa-bug fa-lg"></i> <span class="nav-label">Test Status</span></a></li>
-                <li><a href="stats.html"><i class="fa fa-bar-chart fa-lg"></i> <span class="nav-label">Stats</span></a></li>
+                <li>
+                    <a href="stats.html"><i class="fa fa-bar-chart fa-lg"></i> <span class="nav-label">Stats</span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="app-capacity.html">Platform Capacity</a></li>
+                        <li><a href="fg-capacity.html">Focus Group Capacity</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="communications.html"><i class="fa fa-envelope-o fa-lg"></i> <span class="nav-label">Communications</span></a>
+                </li>
                 <li><a href="settings.html"><i class="fa fa-cogs fa-lg"></i> <span class="nav-label">Settings</span></a></li>
             </ul>
         </div>
@@ -62,7 +71,7 @@
         <div class="row border-bottom">
             <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
-                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " id="btn" href="#"><i class="fa fa-bars"></i> </a>
                     <form role="search" class="navbar-form-custom" method="post" action="#">
                         <div class="form-group">
                             <input type="text" placeholder="Search projects & releases" class="form-control" name="top-search" id="top-search">
@@ -136,7 +145,7 @@
                                             <tr class="gradeX">
                                                 <td><a href="">2890</a></td>
                                                 <td><a href="">Decouple Bill Pay</a></td>
-                                                <td>Jan 17, 2016</td>
+                                                <td>Jan 17</td>
                                                 <td style="text-align: center;">
                                                     <span class="label label-danger center">R</span>
                                                 </td>
@@ -144,7 +153,7 @@
                                             <tr class="gradeC">
                                                 <td><a href="">9998</a></td>
                                                 <td><a href="">Bogus ZIP #1</a></td>
-                                                <td>Jan 17, 2016</td>
+                                                <td>Jan 17</td>
                                                 <td style="text-align: center;">
                                                     <span class="label label-warning center">Y</span>
                                                 </td>
@@ -152,7 +161,7 @@
                                             <tr class="gradeC">
                                                 <td><a href="">9999</a></td>
                                                 <td><a href="">Bogus ZIP #2</a></td>
-                                                <td>Jan 17, 2016</td>
+                                                <td>Jan 17</td>
                                                 <td style="text-align: center;">
                                                     <span class="label label-primary center">G</span>
                                                 </td>
@@ -234,7 +243,7 @@
 
 <!-- Full Calendar -->
 <script src="js/plugins/fullcalendar/fullcalendar.min.js"></script>
-
+    
 <script>
     $(document).ready(function() {
         $('.dataTables-example').DataTable({
